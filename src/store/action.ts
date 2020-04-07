@@ -14,10 +14,26 @@ type SetTasksI = {
   type: types.SET_TASKS;
   data: Array<TaskI>;
 };
+type AddTaskI = {
+  type: types.ADD_TASK,
+  data: TaskI
+};
+type UpdateTaskI = {
+  type: types.UPDATE_TASK,
+  data: TaskI
+};
 
 type SetHabitsI = {
   type: types.SET_HABITS;
   data: Array<HabitI>;
+};
+type AddHabitI = {
+  type: types.ADD_HABIT,
+  data: HabitI
+};
+type UpdateHabitI = {
+  type: types.UPDATE_HABIT,
+  data: HabitI
 };
 
 type SetMessagesI = {
@@ -28,7 +44,11 @@ type SetMessagesI = {
 type ActionI =
   SetLoadingT |
   SetHabitsI |
+  AddHabitI |
+  UpdateHabitI |
   SetTasksI |
+  AddTaskI |
+  UpdateTaskI |
   SetMessagesI |
   SetUserT;
 

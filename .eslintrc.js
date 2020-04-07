@@ -17,6 +17,6 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/camelcase': 'off',
     "import/no-unresolved": [2, { "ignore": ["^@", "^ramda"] }],
-    'sp': 'off'
+    'max-len': 'off'
   }
 }
