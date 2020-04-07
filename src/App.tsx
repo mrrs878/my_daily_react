@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useEffect } from 'react';
+import { withRouter, RouteComponentProps } from 'react-router';
+import { RootContext } from '@/store';
+import MTabBar from '@/components/MTabBar';
+import getUserModule from '@/module/user';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+type PropsI = RouteComponentProps;
 
-export default App;
+const App: React.FC<PropsI> = (props: PropsI) => {
+  window.onNavBarLeftClick = () => {
+    props.history.goBack();
+  };
+
+  const rootContext = useContext(RootContext);
+  const UserModule = getUserModule(rootContext)();
+  useEffect(() => {
+    Promise.all([UserModule.getUserInfo()]).then((res) => {
+      console.log(res);
+    }).catch((e) => {
+      console.log(e);
+    });
+  }, []);
+  return <MTabBar />;
+};
+
+export default withRouter(App);

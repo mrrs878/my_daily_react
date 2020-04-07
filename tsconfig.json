@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -17,9 +18,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "importHelpers": true,
+    "sourceMap": true,
+    "types": [
+      "webpack-env",
+      "node"
+    ]
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "./path.json"
 }
