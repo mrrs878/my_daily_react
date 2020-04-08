@@ -5,7 +5,7 @@ export enum TASK_STATUS {
   failed,
   cancel
 }
-export const TASK_STATUS_VIEW = {
+export const TASK_STATUS_VIEW: ObjectKeyValue<string> = {
   [TASK_STATUS.pending]: '待定中',
   [TASK_STATUS.running]: '进行中',
   [TASK_STATUS.complete]: '已完成',

@@ -18,7 +18,7 @@ interface UserI extends BaseModelI {
 
 interface TaskI extends BaseModelI {
   title: string;
-  label: Array<string>;
+  label: string;
   detail: string;
   status: number;
   alarmTime: number;

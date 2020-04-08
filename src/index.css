@@ -37,6 +37,38 @@ code {
   padding-left: 0.2rem;
   padding-right: 0.2rem;
 }
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+  color: #969799;
+  font-size: 14px;
+  line-height: 24px;
+  border-color: #ebedf0;
+  border-style: solid;
+  border-width: 0;
+}
+.divider:before, .divider:after {
+  content: "";
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  height: 1px;
+  border-color: inherit;
+  border-style: inherit;
+  border-width: 1px 0 0;
+  transform: scaleY(.5);
+}
+.divider:before {
+  margin-right: 16px;
+}
+.divider:after {
+  margin-left: 16px;
+}
+.position-bottom {
+  margin-top: auto
+}
 
 .am-tab-bar {
   height: max-content!important;

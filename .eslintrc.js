@@ -16,7 +16,9 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/camelcase': 'off',
-    "import/no-unresolved": [2, { "ignore": ["^@", "^ramda"] }],
-    'max-len': 'off'
+    'import/no-unresolved': [2, { "ignore": ["^@"] }],
+    'react/destructuring-assignment': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

@@ -23,7 +23,7 @@ const MTabBar: React.FC<PropsI> = (props: PropsI) => {
   useEffect(() => {
     const tmp = !TAB_BAR_ROUTES.includes(props.location.pathname);
     setHidden(tmp);
-  }, [props?.location?.pathname]);
+  }, [props.location.pathname]);
 
   function onTabBarItemClick(path: string) {
     setSelectedTab(path);

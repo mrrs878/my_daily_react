@@ -1,0 +1,14 @@
+.date-picker {
+  color: #f00;
+}
+.extraContainer {
+  display: flex;
+  flex: 1;
+}
+.tagContainer {
+  flex: 1;
+  padding: 10px 0
+}
+.tag {
+  margin-left: 18px;
+}

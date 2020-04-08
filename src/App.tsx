@@ -6,6 +6,7 @@ import getUserModule from '@/module/user';
 
 type PropsI = RouteComponentProps;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const App: React.FC<PropsI> = (props: PropsI) => {
   window.onNavBarLeftClick = () => {
     props.history.goBack();
@@ -15,7 +16,6 @@ const App: React.FC<PropsI> = (props: PropsI) => {
   const UserModule = getUserModule(rootContext)();
   useEffect(() => {
     Promise.all([UserModule.getUserInfo()]).then((res) => {
-      console.log(res);
     }).catch((e) => {
       console.log(e);
     });

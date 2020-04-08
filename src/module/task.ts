@@ -3,7 +3,7 @@ import {
 } from '@/api/task';
 import { ALL_ACTION, ContextI } from '@/store';
 import { RES_CODE } from '@/constant';
-import equals from 'ramda/src/equals';
+import { equals } from 'ramda';
 
 class TaskModule {
   rootContext: ContextI;
