@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "antd-mobile": "^2.3.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "node-waves": "^0.7.6",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
